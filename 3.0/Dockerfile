@@ -5,8 +5,8 @@ FROM quay.io/centos7/s2i-base-centos7
 
 EXPOSE 8080
 
-ENV RUBY_MAJOR_VERSION=2 \
-    RUBY_MINOR_VERSION=7
+ENV RUBY_MAJOR_VERSION=3 \
+    RUBY_MINOR_VERSION=0
 
 ENV RUBY_VERSION="${RUBY_MAJOR_VERSION}.${RUBY_MINOR_VERSION}" \
     RUBY_SCL_NAME_VERSION="${RUBY_MAJOR_VERSION}${RUBY_MINOR_VERSION}"
@@ -25,7 +25,8 @@ It is simple, straight-forward, and extensible." \
     X_SCLS="${NODEJS_SCL} rh-ruby${RUBY_SCL_NAME_VERSION}" \
     MANPATH="/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/local/share/man:/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/share/man:/opt/rh/${NODEJS_SCL}/root/usr/share/man:" \
     XDG_DATA_DIRS="/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/local/share:/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/share:/usr/local/share:/usr/share" \
-    PKG_CONFIG_PATH="/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/local/lib64/pkgconfig:/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/lib64/pkgconfig"
+    PKG_CONFIG_PATH="/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/local/lib64/pkgconfig:/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/lib64/pkgconfig" \
+    FOO="bar"
 
 LABEL summary="$SUMMARY" \
       description="$DESCRIPTION" \
