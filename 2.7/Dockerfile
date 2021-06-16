@@ -25,7 +25,8 @@ It is simple, straight-forward, and extensible." \
     X_SCLS="${NODEJS_SCL} rh-ruby${RUBY_SCL_NAME_VERSION}" \
     MANPATH="/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/local/share/man:/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/share/man:/opt/rh/${NODEJS_SCL}/root/usr/share/man:" \
     XDG_DATA_DIRS="/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/local/share:/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/share:/usr/local/share:/usr/share" \
-    PKG_CONFIG_PATH="/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/local/lib64/pkgconfig:/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/lib64/pkgconfig"
+    PKG_CONFIG_PATH="/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/local/lib64/pkgconfig:/opt/rh/rh-ruby${RUBY_SCL_NAME_VERSION}/root/usr/lib64/pkgconfig" \
+    FOO="bar"
 
 LABEL summary="$SUMMARY" \
       description="$DESCRIPTION" \
